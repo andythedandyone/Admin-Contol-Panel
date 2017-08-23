@@ -107,6 +107,8 @@ export class NavbarComponent implements OnInit {
     }, {
       label: 'Help',
       items: [{
+        label: 'Change Password'
+      },{
         label: 'Help Desk'
       }, {
         label: 'How To'
@@ -114,22 +116,9 @@ export class NavbarComponent implements OnInit {
         label: 'Enhancements -Sell More'
       }, {
         label: 'Enhancements -Engine Easy'
+      },{
+        label: 'Terms'
       }]
     }]
   }
-
 }
-// {
-//   label: 'File',
-//     items: [{
-//   label: 'New',
-//   icon: 'fa-plus',
-//   items: [
-//     {label: 'Project'},
-//     {label: 'Other'},
-//   ]
-// },
-//   {label: 'Open'},
-//   {label: 'Quit'}
-// ]
-// },
