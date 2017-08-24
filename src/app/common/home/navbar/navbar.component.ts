@@ -14,110 +14,160 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
     this.items = [{
+      label: 'Dashboard',
+      routerLink: '/'
+    },{
       label: 'Order Processing',
       items: [{
-        label: 'Manage New Order'
+        label: 'Manage New Order',
+        routerLink: 'mneworder'
       }, {
-        label: 'Manage Received Order'
+        label: 'Manage Received Order',
+        routerLink: 'mreceivedorder'
       }, {
-        label: 'Order Cancellation'
+        label: 'Order Cancellation',
+        routerLink: 'ordercancellation'
       }, {
-        label: 'Manage Mispostings'
+        label: 'Manage Mispostings',
+        routerLink: 'mmisposting'
       }, {
-        label: 'Manual Posting of Order'
+        label: 'Manual Posting of Order',
+        routerLink: 'mpostingorder'
       }, {
-        label: 'Manage Delivered Order'
+        label: 'Manage Delivered Order',
+        routerLink: 'mdeliveredorder'
       }, {
-        label: 'Regenerate Order Emails'
+        label: 'Regenerate Order Emails',
+        routerLink: 'rorderemails'
       }]
   },{
       label: 'Settings',
       items: [{
-        label: 'Setup Delivery Day'
+        label: 'Setup Delivery Day',
+        routerLink: 'sdeliveryday'
       }, {
-        label: 'Setup Delivery Alert'
+        label: 'Setup Delivery Alert',
+        routerLink: 'sdeliveryalert'
       }, {
-        label: 'Setup Client Rules'
+        label: 'Setup Client Rules',
+        routerLink: 'sclientrules'
       }, {
-        label: 'Setup Client Product Rules'
+        label: 'Setup Client Product Rules',
+        routerLink: 'sclientprodrules'
       }, {
-        label: 'Accepted Payment Option'
+        label: 'Accepted Payment Option',
+        routerLink: 'accpmntopt'
       }, {
-        label: 'Manage Content'
+        label: 'Manage Content',
+        routerLink: 'mcontent'
       }, {
-        label: 'Setup Tank Size Specs'
+        label: 'Setup Tank Size Specs',
+        routerLink: 'stanksizespc'
       }, {
-        label: 'Hint Question'
+        label: 'Hint Question',
+        routerLink: 'hquestion'
       }, {
-        label: 'Setup Credit'
+        label: 'Setup Credit',
+        routerLink: 'scredit'
       }, {
-        label: 'Client Newsletter Options'
+        label: 'Client Newsletter Options',
+        routerLink: 'cnewsletteropt'
       }, {
-        label: 'Setup Upsell Product'
+        label: 'Setup Upsell Product',
+        routerLink: 'supsellprod'
       }, {
-        label: 'Manage Product'
+        label: 'Manage Product',
+        routerLink: 'mproduct'
       }, {
-        label: 'Behavioral Targeting'
+        label: 'Behavioral Targeting',
+        routerLink: 'btargeting'
       }, {
-        label: 'Google Analytic Details'
+        label: 'Google Analytic Details',
+        routerLink: 'googleandet'
       }, {
-        label: 'Manage Source'
+        label: 'Manage Source',
+        routerLink: 'msource'
       }, {
-        label: 'Google Analytic Targets'
+        label: 'Google Analytic Targets',
+        routerLink: 'googleantarg'
       }, {
-        label: 'KPI Benchmark(beta'
+        label: 'KPI Benchmark(beta',
+        routerLink: 'kpibench'
       }, {
-        label: 'Facebook Appid'
+        label: 'Facebook Appid',
+        routerLink: 'fbapp'
       }, {
-        label: 'Setup Highlight Option'
+        label: 'Setup Highlight Option',
+        routerLink: 'shighlightopt'
       }],
     }, {
       label: 'Pricing',
       items: [{
-        label: 'Pricing Region Maintenance'
+        label: 'Pricing Region Maintenance',
+        routerLink: 'pregionmaint'
       }, {
-        label: 'Price Maintenance'
+        label: 'Price Maintenance',
+        routerLink: 'pmaintenance'
       }, {
-        label: 'Setup Tax'
+        label: 'Setup Tax',
+        routerLink: 'stax'
       }, {
-        label: 'Edit Tax'
+        label: 'Edit Tax',
+        routerLink: 'etax'
       }]
     }, {
       label: 'Manage Account',
       items: [{
-        label: 'Register Customer'
+        label: 'Find Account',
+        routerLink: 'faccount'
+      },{
+        label: 'Register Customer',
+        routerLink: 'rcustomer'
       }, {
-        label: 'Credit On Account Assign'
+        label: 'Credit On Account Assign',
+        routerLink: 'coaa'
       }, {
-        label: 'Credit On Account UnAssign'
+        label: 'Credit On Account UnAssign',
+        routerLink: 'coau'
       }, {
-        label: 'CSR/Dealer User Setup'
+        label: 'CSR/Dealer User Setup',
+        routerLink: 'csrdealer'
       }, {
-        label: 'Search CSR/Dealer'
+        label: 'Search CSR/Dealer',
+        routerLink: 'csrsearch'
       }]
     }, {
       label: 'Manage Promotions',
       items: [{
-        label: 'Add Promotions'
+        label: 'Add Promotions',
+        routerLink: 'addpromo'
       }, {
-        label: 'Edit/Manage Promotions'
+        label: 'Edit/Manage Promotions',
+        routerLink: 'mpromo'
       }, {
-        label: 'Add/Remove Promo on Order'
+        label: 'Add/Remove Promo on Order',
+        routerLink: 'mpromoorder'
       }]
     }, {
       label: 'Help',
       items: [{
-        label: 'Change Password'
+        label: 'Change Password',
+        routerLink: 'chgpwd'
       },{
-        label: 'Help Desk'
+        label: 'Help Desk',
+        routerLink: 'hdesk'
       }, {
-        label: 'How To'
+        label: 'How To',
+        routerLink: 'howto'
       }, {
-        label: 'Enhancements -Sell More'
+        label: 'Enhancements -Sell More',
+        routerLink: 'enhsellmore'
       }, {
-        label: 'Enhancements -Engine Easy'
+        label: 'Enhancements -Engine Easy',
+        routerLink: 'enhengineez'
       },{
-        label: 'Terms'
+        label: 'Terms',
+        routerLink: 'terms'
       }]
     }]
   }
