@@ -66,12 +66,21 @@ import { EnhengineezComponent } from './common/help/enhengineez/enhengineez.comp
 import { ChnpasswordComponent } from './common/help/chnpassword/chnpassword.component';
 import { TermsComponent } from './common/help/terms/terms.component';
 
+import { SignupComponent } from './auth/signup/signup.component';
+import { SigninComponent } from './auth/signin/signin.component';
+
+import {AuthService} from "./auth/auth.service";
+
 import {
   MenubarModule,
   ButtonModule,
   ChartModule,
-  TabViewModule
+  TabViewModule,
+  PasswordModule
 } from 'primeng/primeng';
+import {FormsModule} from "@angular/forms";
+
+
 
 const appRoutes: Routes = [
   {path: '', component: DashboardComponent},
@@ -126,6 +135,9 @@ const appRoutes: Routes = [
   {path: 'enhengineez', component: CsrdealersearchComponent},
   {path: 'chgpwd', component: CsrdealersearchComponent},
   {path: 'terms', component: CsrdealersearchComponent},
+
+  {path: 'signup', component: SignupComponent},
+  {path: 'signin', component: SigninComponent}
 
 ];
 
@@ -187,17 +199,21 @@ const appRoutes: Routes = [
     EnhsellmoreComponent,
     EnhengineezComponent,
     ChnpasswordComponent,
-    TermsComponent
+    TermsComponent,
+    SignupComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     MenubarModule,
     ButtonModule,
     ChartModule,
     TabViewModule,
+    PasswordModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 
