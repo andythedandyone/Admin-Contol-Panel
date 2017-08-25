@@ -1,13 +1,32 @@
-<div class="login">
+<div class="alert alert-danger"  role="alert" *ngIf="warning">Password does not match</div>
+
+<div class="login" *ngIf="!confirmation">
   <!--<div class="login-triangle"></div>-->
 
   <h2 class="login-header">Signup</h2>
 
   <form class="login-container" (ngSubmit)="onSubmit(f)" #f="ngForm">
-    <p><input type="text" placeholder="User Name" id="uname" required></p>
-    <p><input type="email" placeholder="Email" id="email" required></p>
-    <p><input type="password" placeholder="Password" id="password" required=""></p>
-    <p><input type="password" placeholder="Confirm Password" id="cpassword" required=""></p>
+    <p><input type="text" placeholder="User Name" id="uname" name="uname" ngModel required></p>
+    <p><input type="email" placeholder="Email" id="email" name="email" ngModel></p>
+    <p><input type="password" placeholder="Password" id="password" name="password" ngModel></p>
+    <p><input type="password" placeholder="Confirm Password" id="cpassword" name="cpassword" ngModel></p>
     <p><input type="submit" value="Signup"></p>
   </form>
+  <button (click)="onPopUpConf()" class="btn btn-link">Confirm Registration</button>
 </div>
+
+
+<div class="login" *ngIf="confirmation">
+  <!--<div class="login-triangle"></div>-->
+  <h2 class="login-header">Confirmation</h2>
+
+  <form class="login-container" (ngSubmit)="onConfirmation(f)" #f="ngForm">
+    <p><input type="text" placeholder="Confirmation Code" id="code" name="code" ngModel required></p>
+    <p><input type="text" placeholder="username" id="username" name="username" ngModel required></p>
+
+    <p><input type="submit" value="Confirm"></p>
+  </form>
+</div>
+
+
+

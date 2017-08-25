@@ -79,6 +79,7 @@ import {
   PasswordModule
 } from 'primeng/primeng';
 import {FormsModule} from "@angular/forms";
+import {AuthGuardService} from "./auth/auth-guard.service";
 
 
 
@@ -213,7 +214,7 @@ const appRoutes: Routes = [
     PasswordModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [AuthService],
+  providers: [AuthService, AuthGuardService],
   bootstrap: [AppComponent]
 })
 
