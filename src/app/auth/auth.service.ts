@@ -76,8 +76,9 @@ export class AuthService {
   }
 
   logoutUser() {
-    console.log('You are now logged out')
-    userPool.getCurrentUser().signOut()
+    console.log('You are now logged out');
+    userPool.getCurrentUser().signOut();
+    this.router.navigate(['/login'])
   }
 
   getCurrentUser() {
@@ -85,7 +86,7 @@ export class AuthService {
   }
 
   isValidSession() {
-
+    return this.getCurrentUser() ? true : false
   }
 
 }
