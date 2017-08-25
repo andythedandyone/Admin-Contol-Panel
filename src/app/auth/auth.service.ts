@@ -1,6 +1,8 @@
 import {AuthenticationDetails, CognitoUser, CognitoUserAttribute, CognitoUserPool} from 'amazon-cognito-identity-js';
 import {Injectable} from "@angular/core";
 import {Router} from "@angular/router";
+import {BehaviorSubject} from "rxjs/BehaviorSubject";
+import {Observable} from "rxjs/Observable";
 
 const PoolId = 'us-east-1_dDw72LYkG';
 const ClientId = '6fikflq8ecufd8kk6pi2dl8ndb';
@@ -15,6 +17,7 @@ const userPool = new CognitoUserPool(PoolData);
 @Injectable()
 export class AuthService {
 
+  isUser = new BehaviorSubject<boolean>(false);
   stats: boolean = false;
 
   constructor(private router: Router) {}
@@ -30,7 +33,7 @@ export class AuthService {
       if (err) {
         console.log('There was an error ', err);
       } else {
-        console.log('You have successfully signed up, please confirm your email ', result.user)
+        console.log('You have successfully signed up, please confirm your email ')
       }
     }))
   }
@@ -47,7 +50,7 @@ export class AuthService {
       if (err) {
         console.log('There was an error -> ', err)
       } else {
-        console.log('You have been confirmed ', result)
+        console.log('You have been confirmed ')
       }
     })
   }
@@ -66,7 +69,8 @@ export class AuthService {
 
     cognitoUser.authenticateUser(authDetails, {
       onSuccess: (result) => {
-        console.log('You are now Logged in -> ', result.getAccessToken().getJwtToken())
+        // console.log('You are now Logged in');
+        this.isUser.next(true);
         this.router.navigate(['/'])
       },
       onFailure: (err) => {
@@ -76,9 +80,13 @@ export class AuthService {
   }
 
   logoutUser() {
-    console.log('You are now logged out');
-    userPool.getCurrentUser().signOut();
-    this.router.navigate(['/login'])
+
+    if (this.isValidSession()) {
+      console.log('You are now logged out');
+      this.isUser.next(false);
+      userPool.getCurrentUser().signOut();
+      this.router.navigate(['home'])
+    }
   }
 
   getCurrentUser() {

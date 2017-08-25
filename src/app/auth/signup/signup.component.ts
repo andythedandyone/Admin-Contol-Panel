@@ -17,11 +17,7 @@ export class SignupComponent implements OnInit {
 
   constructor(private authService: AuthService, private router:Router, private route: ActivatedRoute ) { }
 
-  ngOnInit() {
-    this.route.params.subscribe((param: Params) => {
-      console.log(param)
-    })
-  }
+  ngOnInit() {}
 
   onSubmit(data: NgForm) {
 

@@ -1,7 +1,29 @@
-<p-menubar [model]="items">
+<p-menubar [model]="items" *ngIf="menusActive">
 
-  <button pButton label="Signup" class="ui-button-secondary" icon="fa-sign-out" routerLink="signup"></button>
-  <button pButton label="Signin" class="ui-button-secondary" icon="fa-sign-out" routerLink="signin"></button>
-  <button pButton label="Logout" class="ui-button-secondary" icon="fa-sign-out" (click)="onClickLogout()"></button>
+  <ng-template [ngIf]="!menusActive">
+
+    <button pButton label="Signup"
+            class="ui-button-secondary"
+            icon="fa-sign-out"
+            routerLink="signup">
+
+    </button>
+
+    <button pButton
+            label="Signin"
+            class="ui-button-secondary"
+            icon="fa-sign-out"
+            routerLink="signin">
+    </button>
+
+  </ng-template>
+
+  <button pButton label="Logout"
+          class="ui-button-secondary"
+          icon="fa-sign-out"
+          (click)="onClickLogout()"
+          *ngIf="menusActive">
+  </button>
 
 </p-menubar>
+

@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './common/home/home.component';
@@ -76,7 +77,7 @@ import {
   ButtonModule,
   ChartModule,
   TabViewModule,
-  PasswordModule
+  PasswordModule, AccordionModule
 } from 'primeng/primeng';
 import {FormsModule} from "@angular/forms";
 import {AuthGuardService} from "./auth/auth-guard.service";
@@ -138,7 +139,8 @@ const appRoutes: Routes = [
   {path: 'terms', canActivate: [AuthGuardService], component: CsrdealersearchComponent},
 
   {path: 'signup', component: SignupComponent},
-  {path: 'signin', component: SigninComponent}
+  {path: 'signin', component: SigninComponent},
+  {path: 'home', component: HomeComponent}
 
 ];
 
@@ -212,6 +214,8 @@ const appRoutes: Routes = [
     ChartModule,
     TabViewModule,
     PasswordModule,
+    AccordionModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [AuthService, AuthGuardService],
