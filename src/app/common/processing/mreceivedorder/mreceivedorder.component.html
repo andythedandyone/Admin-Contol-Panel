@@ -1,3 +1,1041 @@
-<p>
-  mreceivedorder works!
-</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <span>
+        To Assign promo on order select 'Manage Promotion -&gt; Assign Promotion on Order' on left menu.
+      </span>
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col-md-12" align="center">
+        <span>Product</span>
+        <select>
+          <option value="1">Select Product</option>
+          <option value="9">Commercial Fuel Delivered</option>
+          <option value="157"> -- Premium Low Sulfur #2 Heating Oil</option>
+          <option value="10">Residential Fuel Delivered</option>
+          <option value="156"> -- Premium Low Sulfur #2 Heating Oil</option>
+        </select>
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col-md-12" align="center">
+      <h3>Order Date</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+
+    </div>
+    <div class="col-md-3">
+      <div class="form-group">
+        <label for="datefrom">From</label>
+        <input type="date" class="form-control" id="datefrom">
+        <small id="datefrom" class="form-text text-muted">Pick an Order Date to Start Search.</small>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="form-group">
+        <label for="dateto">To</label>
+        <input type="date" class="form-control" id="dateto">
+        <small id="dateto" class="form-text text-muted">Pick an Order Date to End Search.</small>
+      </div>
+    </div>
+    <div class="col-md-3">
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col-md-12" align="center">
+      <h3>Expected Delivery Date</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+
+    </div>
+    <div class="col-md-3">
+      <div class="form-group">
+        <label for="datefrom">From</label>
+        <input type="date" class="form-control" id="datefrom">
+        <small id="datefrom" class="form-text text-muted">Pick an Order Date to Start Search.</small>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="form-group">
+        <label for="dateto">To</label>
+        <input type="date" class="form-control" id="dateto">
+        <small id="dateto" class="form-text text-muted">Pick an Order Date to End Search.</small>
+      </div>
+    </div>
+    <div class="col-md-3">
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-12 form-check" align="center">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input">
+          Blank expected delivery date?
+        </label>
+    </div>
+
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-12" align="right">
+      <button class="btn btn-button"> Search</button>
+    </div>
+  </div>
+
+
+
+
+<!--//Order	Product	Quantity Ordered	Order Date	Truck Code	Expected Delivery Date	Delivered Quantity	PPG Override	Desired Delivery Date	Actual Delivery Date	Select All-->
+
+  <div class="row">
+    <div class="col-md-12">
+      <span>Orders</span>
+      <select size="1" name="newOrderTable_length">
+        <option value="5" selected="selected">5</option>
+        <option value="10">10</option>
+        <option value="15">15</option>
+        <option value="All">All</option>
+      </select>
+      <span>per page</span>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table -table-striped">
+        <thead>
+        <tr>
+          <th>Order</th>
+          <th>Product</th>
+          <th>Quantity Ordered</th>
+          <th>Order Date</th>
+          <th>Truck Code</th>
+          <th>Expected Delivery Date</th>
+          <th>Delivered Quantity</th>
+          <th>PPG Override</th>
+          <th>Desired Delivery Date</th>
+          <th>Actual Delivery Date</th>
+          <th>Select All</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+          <td>No Matching Found</td>
+        </tr>
+        </tbody>
+
+        <tfoot>
+        <tr class="table-info">
+          <td>
+            Showing 0 to 0 of 0 entries
+          </td>
+        </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+
+
+
+
+  <div class="row">
+    <div class="col-md-2">
+      <span>Export Format</span>
+    </div>
+    <div class="col-md-4">
+      <input type="radio" name="chosenExportType" id="frmManageNewOrder_chosenExportTypeCSV" value="CSV">CSV
+      <input type="radio" name="chosenExportType" id="frmManageNewOrder_chosenExportTypeEXCEL" checked="checked" value="EXCEL">EXCEL
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-12" align="right">
+      <button class="btn btn-button">New Order</button>
+      <button class="btn btn-button">Update & Print</button>
+      <button class="btn btn-button">Print Ticket</button>
+      <button class="btn btn-button">Export</button>
+      <button class="btn btn-button">Update</button>
+    </div>
+  </div>
+
+
+
+
+
+
+</div>
+
+
+
+  <!--<table class="table">-->
+    <!--<tbody>-->
+
+    <!--<tr>-->
+      <!--<div align="right">Order Date</div></td>-->
+      <!--<td width="34%" align="right">-->
+        <!--<fieldset class="floatleft">-->
+          <!--<legend>From</legend>-->
+          <!--<input type="text" name="orderStartDate" value="" id="orderStartDate" class="width5em hasDatepicker"><img class="ui-datepicker-trigger" src="../../ui_resource/css/romeosfuel/images/calendar.gif" alt="..." title="...">-->
+        <!--</fieldset>-->
+        <!--<fieldset class="floatright">-->
+          <!--<legend>To</legend>-->
+          <!--<input type="text" name="orderEndDate" value="" id="orderEndDate" class="width5em hasDatepicker"><img class="ui-datepicker-trigger" src="../../ui_resource/css/romeosfuel/images/calendar.gif" alt="..." title="...">-->
+        <!--</fieldset>-->
+      <!--</td>-->
+      <!--<td width="33%" align="left">&nbsp;</td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<td colspan="4">&nbsp;</td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<td width="33%" align="left"><div align="right">Expected Delivery Date&nbsp;</div></td>-->
+      <!--<td width="34%" align="right">-->
+        <!--<fieldset class="floatleft">-->
+          <!--<legend>From</legend>-->
+          <!--<input type="text" name="deliveryStartDate" value="" id="deliveryStartDate" class="width5em hasDatepicker"><img class="ui-datepicker-trigger" src="../../ui_resource/css/romeosfuel/images/calendar.gif" alt="..." title="...">-->
+        <!--</fieldset>-->
+        <!--<fieldset class="floatright">-->
+          <!--<legend>To</legend>-->
+          <!--<input type="text" name="deliveryEndDate" value="" id="deliveryEndDate" class="width5em hasDatepicker"><img class="ui-datepicker-trigger" src="../../ui_resource/css/romeosfuel/images/calendar.gif" alt="..." title="...">-->
+        <!--</fieldset>-->
+      <!--</td>-->
+      <!--<td width="33%" align="left">&nbsp;</td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<td colspan="4">&nbsp;</td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<td width="33%" align="left">-->
+        <!--<div align="right">Blank expected delivery date?</div>-->
+      <!--</td>-->
+      <!--<td width="34%" align="left">-->
+        <!--<input type="checkbox" name="blankDeliveryDate" value="true" id="blankDeliveryDate" class="checkbox"><input type="hidden" id="__checkbox_blankDeliveryDate" name="__checkbox_blankDeliveryDate" value="true">Yes-->
+      <!--</td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<td colspan="4">&nbsp;</td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<td colspan="4" align="right">-->
+        <!--<input type="button" value="Search" name="submit2" id="btnSearch" class="buttonoff floatright" onclick="productList();">-->
+      <!--</td>-->
+    <!--</tr>-->
+    <!--</tbody></table>-->
+
+
+
+
+<!--</div>-->
+
+
+
+
+
+
+
+<!--<div class="frmcontrolbox">-->
+  <!--<table width="98%" cellpadding="0" cellspacing="0" border="0" align="center">-->
+    <!--<tbody><tr>-->
+      <!--<td colspan="3">To Assign promo on order select 'Manage Promotion -&gt; Assign Promotion on Order' on left menu.<br><br>-->
+
+      <!--</td>-->
+    <!--</tr>-->
+
+
+
+    <!--<input type="hidden" name="clientId" value="80" id="frmReceivedOrder_clientId">-->
+
+
+    <!--<tr>-->
+      <!--<td width="33%" align="left"><div align="right">Product&nbsp;</div></td>-->
+      <!--<td width="34%" align="right">-->
+        <!--<div align="right">-->
+
+
+
+
+          <!--<select name="chosenProduct" id="chosenProduct">-->
+            <!--<option value="1">Select Product</option>-->
+            <!--<option value=""></option>-->
+            <!--<option value="9">Commercial Fuel Delivered</option>-->
+            <!--<option value="157"> &#45;&#45; Premium Low Sulfur #2 Heating Oil</option>-->
+            <!--<option value=""></option>-->
+            <!--<option value="10">Residential Fuel Delivered</option>-->
+            <!--<option value="156"> &#45;&#45; Premium Low Sulfur #2 Heating Oil</option>-->
+            <!--<option value=""></option>-->
+
+
+          <!--</select>-->
+
+
+
+
+
+        <!--</div>-->
+      <!--</td>-->
+      <!--<td width="33%" align="left">&nbsp;</td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<td colspan="4">&nbsp;</td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<td width="33%" align="left"><div align="right">Order Date&nbsp;</div></td>-->
+      <!--<td width="34%" align="right">-->
+        <!--<fieldset class="floatleft">-->
+          <!--<legend>From</legend>-->
+          <!--<input type="text" name="orderStartDate" value="" id="orderStartDate" class="width5em hasDatepicker"><img class="ui-datepicker-trigger" src="../../ui_resource/css/romeosfuel/images/calendar.gif" alt="..." title="...">-->
+        <!--</fieldset>-->
+        <!--<fieldset class="floatright">-->
+          <!--<legend>To</legend>-->
+          <!--<input type="text" name="orderEndDate" value="" id="orderEndDate" class="width5em hasDatepicker"><img class="ui-datepicker-trigger" src="../../ui_resource/css/romeosfuel/images/calendar.gif" alt="..." title="...">-->
+        <!--</fieldset>-->
+      <!--</td>-->
+      <!--<td width="33%" align="left">&nbsp;</td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<td colspan="4">&nbsp;</td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<td width="33%" align="left"><div align="right">Expected Delivery Date&nbsp;</div></td>-->
+      <!--<td width="34%" align="right">-->
+        <!--<fieldset class="floatleft">-->
+          <!--<legend>From</legend>-->
+          <!--<input type="text" name="deliveryStartDate" value="" id="deliveryStartDate" class="width5em hasDatepicker"><img class="ui-datepicker-trigger" src="../../ui_resource/css/romeosfuel/images/calendar.gif" alt="..." title="...">-->
+        <!--</fieldset>-->
+        <!--<fieldset class="floatright">-->
+          <!--<legend>To</legend>-->
+          <!--<input type="text" name="deliveryEndDate" value="" id="deliveryEndDate" class="width5em hasDatepicker"><img class="ui-datepicker-trigger" src="../../ui_resource/css/romeosfuel/images/calendar.gif" alt="..." title="...">-->
+        <!--</fieldset>-->
+      <!--</td>-->
+      <!--<td width="33%" align="left">&nbsp;</td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<td colspan="4">&nbsp;</td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<td width="33%" align="left">-->
+        <!--<div align="right">Blank expected delivery date?</div>-->
+      <!--</td>-->
+      <!--<td width="34%" align="left">-->
+        <!--<input type="checkbox" name="blankDeliveryDate" value="true" id="blankDeliveryDate" class="checkbox"><input type="hidden" id="__checkbox_blankDeliveryDate" name="__checkbox_blankDeliveryDate" value="true">Yes-->
+      <!--</td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<td colspan="4">&nbsp;</td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<td colspan="4" align="right">-->
+        <!--<input type="button" value="Search" name="submit2" id="btnSearch" class="buttonoff floatright" onclick="productList();">-->
+      <!--</td>-->
+    <!--</tr>-->
+    <!--</tbody></table>-->
+  <!--<div id="searchResult">-->
+    <!--<table width="98%" cellpadding="0" cellspacing="0" border="0" align="center">-->
+      <!--<tbody><tr>-->
+        <!--<td align="left"><h3 class="green">Order</h3></td>-->
+      <!--</tr>-->
+      <!--<tr>-->
+
+
+        <!--<td align="left">&nbsp;</td>-->
+
+      <!--</tr>-->
+      <!--</tbody></table>-->
+    <!--<div class="validateTips" style="float: left;">-->
+
+    <!--</div>-->
+    <!--<div id="divPrintTicket" style="display: none;">-->
+      <!--<table width="98%" cellpadding="0" cellspacing="0" border="0" align="center">-->
+        <!--<tbody><tr>-->
+          <!--<td>&nbsp;</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+          <!--<td style="color: red" align="left">No orders displayed.</td>-->
+        <!--</tr>-->
+        <!--</tbody></table>-->
+    <!--</div>-->
+    <!--<input type="hidden" id="dataTableReset" value="-1">-->
+    <!--<input type="hidden" name="deliveryDaySetup" value="true" id="frmReceivedOrder_deliveryDaySetup">-->
+    <!--<input type="hidden" name="" id="productOrderList">-->
+    <!--<div class="dataTables_wrapper" id="rcvdOrderTable_wrapper"><div id="rcvdOrderTable_length" class="dataTables_length">Orders <select size="1" name="rcvdOrderTable_length"><option value="5" selected="selected">5</option><option value="10">10</option><option value="15">15</option><option value="All">All</option></select> per page </div><div class="tableContainer"><table id="rcvdOrderTable" cellpadding="0" cellspacing="0" border="0" class="tbgrid" style="width: 1000px;">-->
+      <!--<thead>-->
+
+      <!--<tr style="background-color: rgb(240, 240, 240);">-->
+        <!--<th class="col1" style="width: 106px;">Order</th>-->
+        <!--<th class="col2" style="width: 139px;">Product</th>-->
+        <!--<th class="col3" style="width: 67px;">Quantity Ordered</th>-->
+        <!--<th class="col4" style="width: 60px;">Order Date</th>-->
+        <!--<th class="col5" style="width: 66px;">Truck Code</th>-->
+        <!--<th class="col6" style="width: 89px;">Expected Delivery Date</th>-->
+        <!--<th class="col7" style="width: 71px;">Delivered Quantity</th>-->
+
+        <!--<th class="col7" style="width: 66px;">PPG Override</th>-->
+
+        <!--<th class="col8" style="width: 74px;">Desired Delivery Date</th>-->
+        <!--<th class="col9" style="width: 95px;">Actual Delivery Date</th>-->
+        <!--<th class="col10" style="width: 27px;">Select All<br><input type="checkbox" name="allSelectOrder" id="allSelectOrder" onclick="selectAllOrders(this)"></th>-->
+      <!--</tr>-->
+
+
+      <!--</thead>-->
+      <!--<tbody><tr style="background-color: rgb(255, 255, 255);" class="odd">-->
+        <!--&lt;!&ndash; Order Id &ndash;&gt;-->
+        <!--<td align="left">-->
+          <!--<input type="hidden" name="productOrderList[0].id" value="188766" id="frmReceivedOrder_productOrderList_0__id">-->
+
+
+
+          <!--<a href="/ticketInvoiceAction?orders=188766">8284</a>-->
+
+
+          <!--<span>-Christine  Kruse</span>-->
+
+
+
+
+
+          <!--<br><br>-->
+          <!--City -Lake Ronkonkoma-->
+
+          <!--<input type="hidden" name="productOrderList[0].customerOrder.customer.user.contact.firstName" value="Christine" id="frmReceivedOrder_productOrderList_0__customerOrder_customer_user_contact_firstName">-->
+          <!--<input type="hidden" name="productOrderList[0].customerOrder.customer.user.contact.middleName" value="" id="frmReceivedOrder_productOrderList_0__customerOrder_customer_user_contact_middleName">-->
+          <!--<input type="hidden" name="productOrderList[0].customerOrder.customer.user.contact.lastName" value="Kruse" id="frmReceivedOrder_productOrderList_0__customerOrder_customer_user_contact_lastName">-->
+
+          <!--<input type="hidden" name="productOrderList[0].customerOrder.customer.user.id" value="40990" id="frmReceivedOrder_productOrderList_0__customerOrder_customer_user_id">-->
+          <!--<input type="hidden" name="productOrderList[0].customerOrder.customer.user.userType.name" value="RESIDENTIALCUSTOMER" id="frmReceivedOrder_productOrderList_0__customerOrder_customer_user_userType_name">-->
+
+          <!--<input type="hidden" name="productOrderList[0].client.id" value="80" id="frmReceivedOrder_productOrderList_0__client_id">-->
+        <!--</td>-->
+
+        <!--<input type="hidden" name="authQuantity" value="250.0" id="authQuantity0">-->
+
+
+
+
+
+
+
+        <!--&lt;!&ndash; Product Name &ndash;&gt;-->
+
+
+
+        <!--<td align="center">-->
+          <!--Premium Low Sulfur #2 Heating Oil-->
+
+          <!--&lt;!&ndash;-->
+
+                                                                 <!--<br/>(<a title="Click to assign or remove promos" href="javascript:popUpWindow('/manageUpsellProductOrderAction_input?order.id=188766', 300, 100, 600, 500)">Promos</a>)-->
+
+          <!--&ndash;&gt;-->
+        <!--</td>-->
+        <!--<td align="center">-->
+          <!--250.0-->
+          <!--<input type="hidden" name="orderedQuantity" value="250.0" id="orderedQuantity0">-->
+          <!--<input type="hidden" name="productOrderList[0].orderItems[0].quantity" value="250.0" id="frmReceivedOrder_productOrderList_0__orderItems_0__quantity">-->
+          <!--<input type="hidden" name="productOrderList[0].orderItems[0].product.id" value="156" id="frmReceivedOrder_productOrderList_0__orderItems_0__product_id">-->
+          <!--<input type="hidden" name="productOrderList[0].orderItems[0].priceOffering.id" value="434228" id="frmReceivedOrder_productOrderList_0__orderItems_0__priceOffering_id">-->
+        <!--</td>-->
+
+
+
+
+        <!--&lt;!&ndash; Order date &ndash;&gt;-->
+        <!--<td align="center">-->
+          <!--08/26/2017-->
+          <!--<input type="hidden" name="productOrderList[0].insertDate" value="8/26/17 8:24:07 AM.000" id="orderDate">-->
+        <!--</td>-->
+
+        <!--&lt;!&ndash; Truck Code &ndash;&gt;-->
+        <!--<td align="center">-->
+          <!--<input type="text" name="productOrderList[0].orderDispatch.truckCode" size="4" maxlength="19" value="" id="orderDispatch.truckCode">-->
+        <!--</td>-->
+
+
+        <!--&lt;!&ndash; Delivery date &ndash;&gt;-->
+        <!--<td align="center">-->
+
+
+          <!--<input type="text" name="productOrderList[0].scheduleDeliveryDate" size="20" value="08/29/2017" id="scheduleDeliveryDate0" class="width5em hasDatepicker"><img class="ui-datepicker-trigger" src="../../ui_resource/css/romeosfuel/images/calendar.gif" alt="Select Date" title="Select Date">-->
+
+
+        <!--</td>-->
+
+        <!--&lt;!&ndash; Delivered quantity  &ndash;&gt;-->
+        <!--&lt;!&ndash; this needs to be removed once all is working fine. This iterates through the dispatched item list and displays correctly.&ndash;&gt;-->
+
+
+
+        <!--<td align="center">-->
+          <!--<input type="text" name="productOrderList[0].orderDispatch.dispatchedItems[0].delieveredQty" size="4" value="" id="deliveredQuantity0">-->
+
+        <!--</td>-->
+        <!--&lt;!&ndash;  New PPG &ndash;&gt;-->
+
+        <!--<td align="center">-->
+          <!--<input type="text" name="productOrderList[0].orderDispatch.dispatchedItems[0].newPpg" size="4" value="" id="ppg0" onfocus="showTooltip('contentpane','Please understand that you will be changing the price per gallon for the order'); return true;" onblur="hideTooltip(); return true;">-->
+        <!--</td>-->
+
+
+
+
+
+        <!--&lt;!&ndash;  PPG to be applied &ndash;&gt;-->
+
+
+
+        <!--&lt;!&ndash; Delivered date &ndash;&gt;-->
+        <!--<td align="center">-->
+
+          <!--<input type="hidden" name="productOrderList[0].desiredDeliveryDate" value="" id="frmReceivedOrder_productOrderList_0__desiredDeliveryDate">-->
+        <!--</td>-->
+
+
+        <!--&lt;!&ndash; Actual delivered date &ndash;&gt;-->
+        <!--<td align="center">-->
+          <!--<div class="width8em"><input type="text" name="productOrderList[0].orderDispatch.actualDeliveryDate" size="21" value="" id="actualDeliveryDate0" class="width5em hasDatepicker"><img class="ui-datepicker-trigger" src="../../ui_resource/css/romeosfuel/images/calendar.gif" alt="Select Date" title="Select Date"></div>-->
+        <!--</td>-->
+
+        <!--&lt;!&ndash; Selection box &ndash;&gt;-->
+        <!--<td align="center">-->
+
+
+          <!--<input type="checkbox" id="receivedCheck0" name="receivedCheck" value="188766">-->
+
+        <!--</td>-->
+      <!--</tr><tr style="background-color: rgb(240, 240, 240);" class="even">-->
+        <!--&lt;!&ndash; Order Id &ndash;&gt;-->
+        <!--<td align="left">-->
+          <!--<input type="hidden" name="productOrderList[1].id" value="188835" id="frmReceivedOrder_productOrderList_1__id">-->
+
+
+
+          <!--<a href="/ticketInvoiceAction?orders=188835">8288</a>-->
+
+
+          <!--<span>-John  Hanko</span>-->
+
+
+
+
+
+          <!--<br><br>-->
+          <!--City -Huntington-->
+
+          <!--<input type="hidden" name="productOrderList[1].customerOrder.customer.user.contact.firstName" value="John" id="frmReceivedOrder_productOrderList_1__customerOrder_customer_user_contact_firstName">-->
+          <!--<input type="hidden" name="productOrderList[1].customerOrder.customer.user.contact.middleName" value="" id="frmReceivedOrder_productOrderList_1__customerOrder_customer_user_contact_middleName">-->
+          <!--<input type="hidden" name="productOrderList[1].customerOrder.customer.user.contact.lastName" value="Hanko" id="frmReceivedOrder_productOrderList_1__customerOrder_customer_user_contact_lastName">-->
+
+          <!--<input type="hidden" name="productOrderList[1].customerOrder.customer.user.id" value="23937" id="frmReceivedOrder_productOrderList_1__customerOrder_customer_user_id">-->
+          <!--<input type="hidden" name="productOrderList[1].customerOrder.customer.user.userType.name" value="RESIDENTIALCUSTOMER" id="frmReceivedOrder_productOrderList_1__customerOrder_customer_user_userType_name">-->
+
+          <!--<input type="hidden" name="productOrderList[1].client.id" value="80" id="frmReceivedOrder_productOrderList_1__client_id">-->
+        <!--</td>-->
+
+        <!--<input type="hidden" name="authQuantity" value="850.0" id="authQuantity1">-->
+
+
+
+
+
+
+
+        <!--&lt;!&ndash; Product Name &ndash;&gt;-->
+
+
+
+        <!--<td align="center">-->
+          <!--Premium Low Sulfur #2 Heating Oil-->
+
+          <!--&lt;!&ndash;-->
+
+                                                                 <!--<br/>(<a title="Click to assign or remove promos" href="javascript:popUpWindow('/manageUpsellProductOrderAction_input?order.id=188835', 300, 100, 600, 500)">Promos</a>)-->
+
+          <!--&ndash;&gt;-->
+        <!--</td>-->
+        <!--<td align="center">-->
+          <!--850.0-->
+          <!--<input type="hidden" name="orderedQuantity" value="850.0" id="orderedQuantity1">-->
+          <!--<input type="hidden" name="productOrderList[1].orderItems[0].quantity" value="850.0" id="frmReceivedOrder_productOrderList_1__orderItems_0__quantity">-->
+          <!--<input type="hidden" name="productOrderList[1].orderItems[0].product.id" value="156" id="frmReceivedOrder_productOrderList_1__orderItems_0__product_id">-->
+          <!--<input type="hidden" name="productOrderList[1].orderItems[0].priceOffering.id" value="434231" id="frmReceivedOrder_productOrderList_1__orderItems_0__priceOffering_id">-->
+        <!--</td>-->
+
+
+
+
+        <!--&lt;!&ndash; Order date &ndash;&gt;-->
+        <!--<td align="center">-->
+          <!--08/26/2017-->
+          <!--<input type="hidden" name="productOrderList[1].insertDate" value="8/26/17 5:11:22 PM.000" id="orderDate">-->
+        <!--</td>-->
+
+        <!--&lt;!&ndash; Truck Code &ndash;&gt;-->
+        <!--<td align="center">-->
+          <!--<input type="text" name="productOrderList[1].orderDispatch.truckCode" size="4" maxlength="19" value="" id="orderDispatch.truckCode">-->
+        <!--</td>-->
+
+
+        <!--&lt;!&ndash; Delivery date &ndash;&gt;-->
+        <!--<td align="center">-->
+
+
+          <!--<input type="text" name="productOrderList[1].scheduleDeliveryDate" size="20" value="08/28/2017" id="scheduleDeliveryDate1" class="width5em hasDatepicker"><img class="ui-datepicker-trigger" src="../../ui_resource/css/romeosfuel/images/calendar.gif" alt="Select Date" title="Select Date">-->
+
+
+        <!--</td>-->
+
+        <!--&lt;!&ndash; Delivered quantity  &ndash;&gt;-->
+        <!--&lt;!&ndash; this needs to be removed once all is working fine. This iterates through the dispatched item list and displays correctly.&ndash;&gt;-->
+
+
+
+        <!--<td align="center">-->
+          <!--<input type="text" name="productOrderList[1].orderDispatch.dispatchedItems[0].delieveredQty" size="4" value="" id="deliveredQuantity1">-->
+
+        <!--</td>-->
+        <!--&lt;!&ndash;  New PPG &ndash;&gt;-->
+
+        <!--<td align="center">-->
+          <!--<input type="text" name="productOrderList[1].orderDispatch.dispatchedItems[0].newPpg" size="4" value="" id="ppg1" onfocus="showTooltip('contentpane','Please understand that you will be changing the price per gallon for the order'); return true;" onblur="hideTooltip(); return true;">-->
+        <!--</td>-->
+
+
+
+
+
+        <!--&lt;!&ndash;  PPG to be applied &ndash;&gt;-->
+
+
+
+        <!--&lt;!&ndash; Delivered date &ndash;&gt;-->
+        <!--<td align="center">-->
+
+          <!--<input type="hidden" name="productOrderList[1].desiredDeliveryDate" value="" id="frmReceivedOrder_productOrderList_1__desiredDeliveryDate">-->
+        <!--</td>-->
+
+
+        <!--&lt;!&ndash; Actual delivered date &ndash;&gt;-->
+        <!--<td align="center">-->
+          <!--<div class="width8em"><input type="text" name="productOrderList[1].orderDispatch.actualDeliveryDate" size="21" value="" id="actualDeliveryDate1" class="width5em hasDatepicker"><img class="ui-datepicker-trigger" src="../../ui_resource/css/romeosfuel/images/calendar.gif" alt="Select Date" title="Select Date"></div>-->
+        <!--</td>-->
+
+        <!--&lt;!&ndash; Selection box &ndash;&gt;-->
+        <!--<td align="center">-->
+
+
+          <!--<input type="checkbox" id="receivedCheck1" name="receivedCheck" value="188835">-->
+
+        <!--</td>-->
+      <!--</tr><tr style="background-color: rgb(255, 255, 255);" class="odd">-->
+        <!--&lt;!&ndash; Order Id &ndash;&gt;-->
+        <!--<td align="left">-->
+          <!--<input type="hidden" name="productOrderList[2].id" value="188858" id="frmReceivedOrder_productOrderList_2__id">-->
+
+
+
+          <!--<a href="/ticketInvoiceAction?orders=188858">8289</a>-->
+
+
+          <!--<span>-Jordan  Ruzz</span>-->
+
+
+
+
+
+          <!--<br><br>-->
+          <!--City -Patchogue-->
+
+          <!--<input type="hidden" name="productOrderList[2].customerOrder.customer.user.contact.firstName" value="Jordan" id="frmReceivedOrder_productOrderList_2__customerOrder_customer_user_contact_firstName">-->
+          <!--<input type="hidden" name="productOrderList[2].customerOrder.customer.user.contact.middleName" value="" id="frmReceivedOrder_productOrderList_2__customerOrder_customer_user_contact_middleName">-->
+          <!--<input type="hidden" name="productOrderList[2].customerOrder.customer.user.contact.lastName" value="Ruzz" id="frmReceivedOrder_productOrderList_2__customerOrder_customer_user_contact_lastName">-->
+
+          <!--<input type="hidden" name="productOrderList[2].customerOrder.customer.user.id" value="35252" id="frmReceivedOrder_productOrderList_2__customerOrder_customer_user_id">-->
+          <!--<input type="hidden" name="productOrderList[2].customerOrder.customer.user.userType.name" value="RESIDENTIALCUSTOMER" id="frmReceivedOrder_productOrderList_2__customerOrder_customer_user_userType_name">-->
+
+          <!--<input type="hidden" name="productOrderList[2].client.id" value="80" id="frmReceivedOrder_productOrderList_2__client_id">-->
+        <!--</td>-->
+
+        <!--<input type="hidden" name="authQuantity" value="275.0" id="authQuantity2">-->
+
+
+
+
+
+
+
+        <!--&lt;!&ndash; Product Name &ndash;&gt;-->
+
+
+
+        <!--<td align="center">-->
+          <!--Premium Low Sulfur #2 Heating Oil-->
+
+          <!--&lt;!&ndash;-->
+
+                                                                 <!--<br/>(<a title="Click to assign or remove promos" href="javascript:popUpWindow('/manageUpsellProductOrderAction_input?order.id=188858', 300, 100, 600, 500)">Promos</a>)-->
+
+          <!--&ndash;&gt;-->
+        <!--</td>-->
+        <!--<td align="center">-->
+          <!--275.0-->
+          <!--<input type="hidden" name="orderedQuantity" value="275.0" id="orderedQuantity2">-->
+          <!--<input type="hidden" name="productOrderList[2].orderItems[0].quantity" value="275.0" id="frmReceivedOrder_productOrderList_2__orderItems_0__quantity">-->
+          <!--<input type="hidden" name="productOrderList[2].orderItems[0].product.id" value="156" id="frmReceivedOrder_productOrderList_2__orderItems_0__product_id">-->
+          <!--<input type="hidden" name="productOrderList[2].orderItems[0].priceOffering.id" value="434228" id="frmReceivedOrder_productOrderList_2__orderItems_0__priceOffering_id">-->
+        <!--</td>-->
+
+
+
+
+        <!--&lt;!&ndash; Order date &ndash;&gt;-->
+        <!--<td align="center">-->
+          <!--08/27/2017-->
+          <!--<input type="hidden" name="productOrderList[2].insertDate" value="8/27/17 7:09:17 AM.000" id="orderDate">-->
+        <!--</td>-->
+
+        <!--&lt;!&ndash; Truck Code &ndash;&gt;-->
+        <!--<td align="center">-->
+          <!--<input type="text" name="productOrderList[2].orderDispatch.truckCode" size="4" maxlength="19" value="" id="orderDispatch.truckCode">-->
+        <!--</td>-->
+
+
+        <!--&lt;!&ndash; Delivery date &ndash;&gt;-->
+        <!--<td align="center">-->
+
+
+          <!--<input type="text" name="productOrderList[2].scheduleDeliveryDate" size="20" value="08/28/2017" id="scheduleDeliveryDate2" class="width5em hasDatepicker"><img class="ui-datepicker-trigger" src="../../ui_resource/css/romeosfuel/images/calendar.gif" alt="Select Date" title="Select Date">-->
+
+
+        <!--</td>-->
+
+        <!--&lt;!&ndash; Delivered quantity  &ndash;&gt;-->
+        <!--&lt;!&ndash; this needs to be removed once all is working fine. This iterates through the dispatched item list and displays correctly.&ndash;&gt;-->
+
+
+
+        <!--<td align="center">-->
+          <!--<input type="text" name="productOrderList[2].orderDispatch.dispatchedItems[0].delieveredQty" size="4" value="" id="deliveredQuantity2">-->
+
+        <!--</td>-->
+        <!--&lt;!&ndash;  New PPG &ndash;&gt;-->
+
+        <!--<td align="center">-->
+          <!--<input type="text" name="productOrderList[2].orderDispatch.dispatchedItems[0].newPpg" size="4" value="" id="ppg2" onfocus="showTooltip('contentpane','Please understand that you will be changing the price per gallon for the order'); return true;" onblur="hideTooltip(); return true;">-->
+        <!--</td>-->
+
+
+
+
+
+        <!--&lt;!&ndash;  PPG to be applied &ndash;&gt;-->
+
+
+
+        <!--&lt;!&ndash; Delivered date &ndash;&gt;-->
+        <!--<td align="center">-->
+
+          <!--<input type="hidden" name="productOrderList[2].desiredDeliveryDate" value="" id="frmReceivedOrder_productOrderList_2__desiredDeliveryDate">-->
+        <!--</td>-->
+
+
+        <!--&lt;!&ndash; Actual delivered date &ndash;&gt;-->
+        <!--<td align="center">-->
+          <!--<div class="width8em"><input type="text" name="productOrderList[2].orderDispatch.actualDeliveryDate" size="21" value="" id="actualDeliveryDate2" class="width5em hasDatepicker"><img class="ui-datepicker-trigger" src="../../ui_resource/css/romeosfuel/images/calendar.gif" alt="Select Date" title="Select Date"></div>-->
+        <!--</td>-->
+
+        <!--&lt;!&ndash; Selection box &ndash;&gt;-->
+        <!--<td align="center">-->
+
+
+          <!--<input type="checkbox" id="receivedCheck2" name="receivedCheck" value="188858">-->
+
+        <!--</td>-->
+      <!--</tr><tr style="background-color: rgb(240, 240, 240);" class="even">-->
+        <!--&lt;!&ndash; Order Id &ndash;&gt;-->
+        <!--<td align="left">-->
+          <!--<input type="hidden" name="productOrderList[3].id" value="188871" id="frmReceivedOrder_productOrderList_3__id">-->
+
+
+
+          <!--<a href="/ticketInvoiceAction?orders=188871">8290</a>-->
+
+
+          <!--<span>-JUSTIN  SLEZAK</span>-->
+
+
+
+
+
+          <!--<br><br>-->
+          <!--City -Huntington-->
+
+          <!--<input type="hidden" name="productOrderList[3].customerOrder.customer.user.contact.firstName" value="JUSTIN" id="frmReceivedOrder_productOrderList_3__customerOrder_customer_user_contact_firstName">-->
+          <!--<input type="hidden" name="productOrderList[3].customerOrder.customer.user.contact.middleName" value="" id="frmReceivedOrder_productOrderList_3__customerOrder_customer_user_contact_middleName">-->
+          <!--<input type="hidden" name="productOrderList[3].customerOrder.customer.user.contact.lastName" value="SLEZAK" id="frmReceivedOrder_productOrderList_3__customerOrder_customer_user_contact_lastName">-->
+
+          <!--<input type="hidden" name="productOrderList[3].customerOrder.customer.user.id" value="44712" id="frmReceivedOrder_productOrderList_3__customerOrder_customer_user_id">-->
+          <!--<input type="hidden" name="productOrderList[3].customerOrder.customer.user.userType.name" value="RESIDENTIALCUSTOMER" id="frmReceivedOrder_productOrderList_3__customerOrder_customer_user_userType_name">-->
+
+          <!--<input type="hidden" name="productOrderList[3].client.id" value="80" id="frmReceivedOrder_productOrderList_3__client_id">-->
+        <!--</td>-->
+
+        <!--<input type="hidden" name="authQuantity" value="250.0" id="authQuantity3">-->
+
+
+
+
+
+
+
+        <!--&lt;!&ndash; Product Name &ndash;&gt;-->
+
+
+
+        <!--<td align="center">-->
+          <!--Premium Low Sulfur #2 Heating Oil-->
+
+          <!--&lt;!&ndash;-->
+
+                                                                 <!--<br/>(<a title="Click to assign or remove promos" href="javascript:popUpWindow('/manageUpsellProductOrderAction_input?order.id=188871', 300, 100, 600, 500)">Promos</a>)-->
+
+          <!--&ndash;&gt;-->
+        <!--</td>-->
+        <!--<td align="center">-->
+          <!--250.0-->
+          <!--<input type="hidden" name="orderedQuantity" value="250.0" id="orderedQuantity3">-->
+          <!--<input type="hidden" name="productOrderList[3].orderItems[0].quantity" value="250.0" id="frmReceivedOrder_productOrderList_3__orderItems_0__quantity">-->
+          <!--<input type="hidden" name="productOrderList[3].orderItems[0].product.id" value="156" id="frmReceivedOrder_productOrderList_3__orderItems_0__product_id">-->
+          <!--<input type="hidden" name="productOrderList[3].orderItems[0].priceOffering.id" value="434228" id="frmReceivedOrder_productOrderList_3__orderItems_0__priceOffering_id">-->
+        <!--</td>-->
+
+
+
+
+        <!--&lt;!&ndash; Order date &ndash;&gt;-->
+        <!--<td align="center">-->
+          <!--08/27/2017-->
+          <!--<input type="hidden" name="productOrderList[3].insertDate" value="8/27/17 8:44:46 AM.000" id="orderDate">-->
+        <!--</td>-->
+
+        <!--&lt;!&ndash; Truck Code &ndash;&gt;-->
+        <!--<td align="center">-->
+          <!--<input type="text" name="productOrderList[3].orderDispatch.truckCode" size="4" maxlength="19" value="" id="orderDispatch.truckCode">-->
+        <!--</td>-->
+
+
+        <!--&lt;!&ndash; Delivery date &ndash;&gt;-->
+        <!--<td align="center">-->
+
+
+          <!--<input type="text" name="productOrderList[3].scheduleDeliveryDate" size="20" value="08/28/2017" id="scheduleDeliveryDate3" class="width5em hasDatepicker"><img class="ui-datepicker-trigger" src="../../ui_resource/css/romeosfuel/images/calendar.gif" alt="Select Date" title="Select Date">-->
+
+
+        <!--</td>-->
+
+        <!--&lt;!&ndash; Delivered quantity  &ndash;&gt;-->
+        <!--&lt;!&ndash; this needs to be removed once all is working fine. This iterates through the dispatched item list and displays correctly.&ndash;&gt;-->
+
+
+
+        <!--<td align="center">-->
+          <!--<input type="text" name="productOrderList[3].orderDispatch.dispatchedItems[0].delieveredQty" size="4" value="" id="deliveredQuantity3">-->
+
+        <!--</td>-->
+        <!--&lt;!&ndash;  New PPG &ndash;&gt;-->
+
+        <!--<td align="center">-->
+          <!--<input type="text" name="productOrderList[3].orderDispatch.dispatchedItems[0].newPpg" size="4" value="" id="ppg3" onfocus="showTooltip('contentpane','Please understand that you will be changing the price per gallon for the order'); return true;" onblur="hideTooltip(); return true;">-->
+        <!--</td>-->
+
+
+
+
+
+        <!--&lt;!&ndash;  PPG to be applied &ndash;&gt;-->
+
+
+
+        <!--&lt;!&ndash; Delivered date &ndash;&gt;-->
+        <!--<td align="center">-->
+
+          <!--<input type="hidden" name="productOrderList[3].desiredDeliveryDate" value="" id="frmReceivedOrder_productOrderList_3__desiredDeliveryDate">-->
+        <!--</td>-->
+
+
+        <!--&lt;!&ndash; Actual delivered date &ndash;&gt;-->
+        <!--<td align="center">-->
+          <!--<div class="width8em"><input type="text" name="productOrderList[3].orderDispatch.actualDeliveryDate" size="21" value="" id="actualDeliveryDate3" class="width5em hasDatepicker"><img class="ui-datepicker-trigger" src="../../ui_resource/css/romeosfuel/images/calendar.gif" alt="Select Date" title="Select Date"></div>-->
+        <!--</td>-->
+
+        <!--&lt;!&ndash; Selection box &ndash;&gt;-->
+        <!--<td align="center">-->
+
+
+          <!--<input type="checkbox" id="receivedCheck3" name="receivedCheck" value="188871">-->
+
+        <!--</td>-->
+      <!--</tr><tr style="background-color: rgb(255, 255, 255);" class="odd">-->
+        <!--&lt;!&ndash; Order Id &ndash;&gt;-->
+        <!--<td align="left">-->
+          <!--<input type="hidden" name="productOrderList[4].id" value="188885" id="frmReceivedOrder_productOrderList_4__id">-->
+
+
+
+          <!--<a href="/ticketInvoiceAction?orders=188885">8291</a>-->
+
+
+          <!--<span>-Christina  Lancer</span>-->
+
+
+
+
+
+          <!--<br><br>-->
+          <!--City -Centereach-->
+
+          <!--<input type="hidden" name="productOrderList[4].customerOrder.customer.user.contact.firstName" value="Christina" id="frmReceivedOrder_productOrderList_4__customerOrder_customer_user_contact_firstName">-->
+          <!--<input type="hidden" name="productOrderList[4].customerOrder.customer.user.contact.middleName" value="" id="frmReceivedOrder_productOrderList_4__customerOrder_customer_user_contact_middleName">-->
+          <!--<input type="hidden" name="productOrderList[4].customerOrder.customer.user.contact.lastName" value="Lancer" id="frmReceivedOrder_productOrderList_4__customerOrder_customer_user_contact_lastName">-->
+
+          <!--<input type="hidden" name="productOrderList[4].customerOrder.customer.user.id" value="27480" id="frmReceivedOrder_productOrderList_4__customerOrder_customer_user_id">-->
+          <!--<input type="hidden" name="productOrderList[4].customerOrder.customer.user.userType.name" value="RESIDENTIALCUSTOMER" id="frmReceivedOrder_productOrderList_4__customerOrder_customer_user_userType_name">-->
+
+          <!--<input type="hidden" name="productOrderList[4].client.id" value="80" id="frmReceivedOrder_productOrderList_4__client_id">-->
+        <!--</td>-->
+
+        <!--<input type="hidden" name="authQuantity" value="150.0" id="authQuantity4">-->
+
+
+
+
+
+
+
+        <!--&lt;!&ndash; Product Name &ndash;&gt;-->
+
+
+
+        <!--<td align="center">-->
+          <!--Premium Low Sulfur #2 Heating Oil-->
+
+          <!--&lt;!&ndash;-->
+
+                                                                 <!--<br/>(<a title="Click to assign or remove promos" href="javascript:popUpWindow('/manageUpsellProductOrderAction_input?order.id=188885', 300, 100, 600, 500)">Promos</a>)-->
+
+          <!--&ndash;&gt;-->
+        <!--</td>-->
+        <!--<td align="center">-->
+          <!--150.0-->
+          <!--<input type="hidden" name="orderedQuantity" value="150.0" id="orderedQuantity4">-->
+          <!--<input type="hidden" name="productOrderList[4].orderItems[0].quantity" value="150.0" id="frmReceivedOrder_productOrderList_4__orderItems_0__quantity">-->
+          <!--<input type="hidden" name="productOrderList[4].orderItems[0].product.id" value="156" id="frmReceivedOrder_productOrderList_4__orderItems_0__product_id">-->
+          <!--<input type="hidden" name="productOrderList[4].orderItems[0].priceOffering.id" value="434227" id="frmReceivedOrder_productOrderList_4__orderItems_0__priceOffering_id">-->
+        <!--</td>-->
+
+
+
+
+        <!--&lt;!&ndash; Order date &ndash;&gt;-->
+        <!--<td align="center">-->
+          <!--08/27/2017-->
+          <!--<input type="hidden" name="productOrderList[4].insertDate" value="8/27/17 10:29:46 AM.000" id="orderDate">-->
+        <!--</td>-->
+
+        <!--&lt;!&ndash; Truck Code &ndash;&gt;-->
+        <!--<td align="center">-->
+          <!--<input type="text" name="productOrderList[4].orderDispatch.truckCode" size="4" maxlength="19" value="" id="orderDispatch.truckCode">-->
+        <!--</td>-->
+
+
+        <!--&lt;!&ndash; Delivery date &ndash;&gt;-->
+        <!--<td align="center">-->
+
+
+          <!--<input type="text" name="productOrderList[4].scheduleDeliveryDate" size="20" value="08/28/2017" id="scheduleDeliveryDate4" class="width5em hasDatepicker"><img class="ui-datepicker-trigger" src="../../ui_resource/css/romeosfuel/images/calendar.gif" alt="Select Date" title="Select Date">-->
+
+
+        <!--</td>-->
+
+        <!--&lt;!&ndash; Delivered quantity  &ndash;&gt;-->
+        <!--&lt;!&ndash; this needs to be removed once all is working fine. This iterates through the dispatched item list and displays correctly.&ndash;&gt;-->
+
+
+
+        <!--<td align="center">-->
+          <!--<input type="text" name="productOrderList[4].orderDispatch.dispatchedItems[0].delieveredQty" size="4" value="" id="deliveredQuantity4">-->
+
+        <!--</td>-->
+        <!--&lt;!&ndash;  New PPG &ndash;&gt;-->
+
+        <!--<td align="center">-->
+          <!--<input type="text" name="productOrderList[4].orderDispatch.dispatchedItems[0].newPpg" size="4" value="" id="ppg4" onfocus="showTooltip('contentpane','Please understand that you will be changing the price per gallon for the order'); return true;" onblur="hideTooltip(); return true;">-->
+        <!--</td>-->
+
+
+
+
+
+        <!--&lt;!&ndash;  PPG to be applied &ndash;&gt;-->
+
+
+
+        <!--&lt;!&ndash; Delivered date &ndash;&gt;-->
+        <!--<td align="center">-->
+
+          <!--<input type="hidden" name="productOrderList[4].desiredDeliveryDate" value="" id="frmReceivedOrder_productOrderList_4__desiredDeliveryDate">-->
+        <!--</td>-->
+
+
+        <!--&lt;!&ndash; Actual delivered date &ndash;&gt;-->
+        <!--<td align="center">-->
+          <!--<div class="width8em"><input type="text" name="productOrderList[4].orderDispatch.actualDeliveryDate" size="21" value="" id="actualDeliveryDate4" class="width5em hasDatepicker"><img class="ui-datepicker-trigger" src="../../ui_resource/css/romeosfuel/images/calendar.gif" alt="Select Date" title="Select Date"></div>-->
+        <!--</td>-->
+
+        <!--&lt;!&ndash; Selection box &ndash;&gt;-->
+        <!--<td align="center">-->
+
+
+          <!--<input type="checkbox" id="receivedCheck4" name="receivedCheck" value="188885">-->
+
+        <!--</td>-->
+      <!--</tr></tbody>-->
+      <!--<tfoot>-->
+      <!--<tr style="background-color: rgb(240, 240, 240);"><td colspan="11"></td></tr>-->
+      <!--</tfoot>-->
+    <!--</table></div><div class="dataTables_info" id="rcvdOrderTable_info"><strong>Showing<span class="green"> 1</span> to <span class="green">5</span> of <span class="green">15 </span>records</strong></div><div class="dataTables_paginate paging_two_button" id="rcvdOrderTable_paginate"><div class="paginate_disabled_previous" title="Previous" id="rcvdOrderTable_previous"></div><div class="paginate_enabled_next" title="Next" id="rcvdOrderTable_next"></div></div></div>-->
+    <!--<table width="98%" align="center">-->
+      <!--<tbody><tr>-->
+        <!--<td width="15%">Export Format : </td>-->
+        <!--<td width="85%">-->
+
+          <!--<input type="radio" name="chosenExportType" id="frmReceivedOrder_chosenExportTypeCSV" value="CSV">CSV-->
+
+          <!--<input type="radio" name="chosenExportType" id="frmReceivedOrder_chosenExportTypeEXCEL" checked="checked" value="EXCEL">EXCEL-->
+
+        <!--</td>-->
+      <!--</tr>-->
+      <!--</tbody></table>-->
+  <!--</div>-->
+<!--</div>-->

@@ -2,7 +2,7 @@ import {AuthenticationDetails, CognitoUser, CognitoUserAttribute, CognitoUserPoo
 import {Injectable} from "@angular/core";
 import {Router} from "@angular/router";
 import {BehaviorSubject} from "rxjs/BehaviorSubject";
-import {Observable} from "rxjs/Observable";
+
 
 const PoolId = 'us-east-1_dDw72LYkG';
 const ClientId = '6fikflq8ecufd8kk6pi2dl8ndb';
@@ -80,7 +80,6 @@ export class AuthService {
   }
 
   logoutUser() {
-
     if (this.isValidSession()) {
       console.log('You are now logged out');
       this.isUser.next(false);

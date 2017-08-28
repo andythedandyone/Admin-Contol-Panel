@@ -11,6 +11,7 @@ export class NavbarComponent implements OnInit {
 
   items: MenuItem[];
   menusActive: boolean = false;
+  username: string;
 
   constructor(private authService: AuthService) { }
 
@@ -18,6 +19,7 @@ export class NavbarComponent implements OnInit {
 
     this.authService.isUser.subscribe((status: boolean) => {
       this.menusActive = status;
+      this.username = this.authService.getCurrentUser().getUsername()
       if (status) {
         this.items = [{
           label: 'Dashboard',

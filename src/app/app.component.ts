@@ -11,7 +11,7 @@ export class AppComponent implements OnInit{
   constructor(private authService: AuthService, private route: Router) {}
   ngOnInit() {
     if (!this.authService.isValidSession()) {
-      this.route.navigate(['/home'])
+      this.route.navigate(['home'])
     } else {
       this.authService.isUser.next(true);
     }

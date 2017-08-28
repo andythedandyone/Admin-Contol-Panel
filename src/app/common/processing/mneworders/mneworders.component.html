@@ -1,3 +1,196 @@
-<p>
-  mneworders works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="cold-md-6">
+      <span>Product</span>
+      <span>
+        <select name="chosenProduct" id="chosenProduct">
+        <option value="1">Select Product</option>
+        <option value=""></option>
+        <option value="9">Commercial Fuel Delivered</option>
+        <option value="157"> -- Premium Low Sulfur #2 Heating Oil</option>
+        <option value=""></option>
+        <option value="10">Residential Fuel Delivered</option>
+        <option value="156"> -- Premium Low Sulfur #2 Heating Oil</option>
+        <option value=""></option>
+        </select>
+      </span>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <span>Orders</span>
+      <select size="1" name="newOrderTable_length">
+        <option value="5" selected="selected">5</option>
+        <option value="10">10</option>
+        <option value="15">15</option>
+        <option value="All">All</option>
+      </select>
+      <span>per page</span>
+    </div>
+  </div>
+
+  <table class="table -table-striped">
+    <thead>
+      <tr>
+        <th>Order</th>
+        <th>City</th>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Select All</th>
+        <th>Route Map</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>No Matching Found</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr class="table-info">
+        <td>
+          Showing 0 to 0 of 0 entries
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <div class="row">
+    <div class="col-md-2">
+      <span>Export Format</span>
+    </div>
+    <div class="col-md-4">
+      <input type="radio" name="chosenExportType" id="frmManageNewOrder_chosenExportTypeCSV" value="CSV">CSV
+      <input type="radio" name="chosenExportType" id="frmManageNewOrder_chosenExportTypeEXCEL" checked="checked" value="EXCEL">EXCEL
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <button class="btn btn-button">Receive Selected Orders</button>
+      <button class="btn btn-button">Export Selected Orders</button>
+    </div>
+  </div>
+
+
+</div>
+
+
+
+
+
+<!--<div id="contentpane">-->
+  <!---->
+  <!--<form id="frmManageNewOrder" name="frmManageNewOrder" action="/manageNewOrderAction" method="post">-->
+    <!--<input type="hidden" name="changeClient" value="false" id="changeClient">-->
+    <!--<input type="hidden" name="modifyUpsellsCalledFrom" value="NewOrder" id="modifyUpsellsCalledFrom">-->
+    <!--<h1>Manage New Order</h1>-->
+    <!--<div class="contentpanewrapper">-->
+      <!--<div class="frmcontrolbox">-->
+        <!--<table width="98%" align="center" cellpadding="0" cellspacing="4" border="0">-->
+
+
+
+          <!--<input type="hidden" name="clientId" value="80" id="frmManageNewOrder_clientId">-->
+
+
+          <!--<tbody><tr>-->
+            <!--<td width="34%" align="right"><div align="right">Product</div></td>-->
+            <!--<td width="33%" align="left"><div align="right">-->
+
+
+
+
+              <!--<select name="chosenProduct" id="chosenProduct" onchange="javascript:productList()">-->
+                <!--<option value="1">Select Product</option>-->
+                <!--<option value=""></option>-->
+                <!--<option value="9">Commercial Fuel Delivered</option>-->
+                <!--<option value="157"> &#45;&#45; Premium Low Sulfur #2 Heating Oil</option>-->
+                <!--<option value=""></option>-->
+                <!--<option value="10">Residential Fuel Delivered</option>-->
+                <!--<option value="156"> &#45;&#45; Premium Low Sulfur #2 Heating Oil</option>-->
+                <!--<option value=""></option>-->
+
+
+              <!--</select>-->
+
+
+
+
+            <!--</div></td>-->
+
+            <!--<td width="33%" align="left">&nbsp;</td>-->
+          <!--</tr>-->
+          <!--</tbody></table>-->
+        <!--<div id="searchResult">-->
+          <!--<table width="98%" cellpadding="0" cellspacing="0" border="0" align="center" class="margintop5px">-->
+            <!--<tbody><tr>-->
+              <!--<td align="left"><h3 class="green">Order</h3></td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+              <!--<td align="left">&nbsp;</td>-->
+            <!--</tr>-->
+            <!--</tbody></table>-->
+          <!--<div>-->
+            <!--<div class="validateTips" style="float: left;">-->
+
+            <!--</div>-->
+
+
+            <!--<input type="hidden" id="dataTableReset" value="0">-->
+
+            <!--<div class="dataTables_wrapper" id="newOrderTable_wrapper"><div id="newOrderTable_length" class="dataTables_length">Orders <select size="1" name="newOrderTable_length"><option value="5" selected="selected">5</option><option value="10">10</option><option value="15">15</option><option value="All">All</option></select> per page </div><table id="newOrderTable" width="98%" cellpadding="0" cellspacing="0" border="0" class="tbgrid margintop5px" align="center" style="width: 980px;">-->
+              <!--<thead>-->
+              <!--<tr style="background-color: rgb(240, 240, 240);">-->
+                <!--<th align="center" style="width: 110px;">Order<br>&nbsp;</th>-->
+                <!--<th align="center" style="width: 75px;">City<br>&nbsp;</th>-->
+                <!--<th align="center" style="width: 155px;">Product<br>&nbsp;</th>-->
+                <!--<th align="center" style="width: 166px;">Quantity<br>&nbsp;</th>-->
+                <!--<th align="center" style="width: 185px;">Select All<br><input type="checkbox" name="allSelectOrder" id="allSelectOrder" onchange="selectAllOrders(this)" onclick="selectAllOrders(this)"></th>-->
+                <!--<th align="center" style="width: 211px;">Route Map<br>&nbsp;</th>-->
+              <!--</tr>-->
+              <!--</thead>-->
+              <!--<tbody><tr class="odd"><td valign="top" colspan="6" class="dataTables_empty">No matching records found</td></tr></tbody>-->
+              <!--<tfoot>-->
+              <!--<tr style="background-color: rgb(255, 255, 255);">-->
+                <!--<td colspan="6">&nbsp;-->
+
+                <!--</td>-->
+              <!--</tr>-->
+              <!--</tfoot>-->
+            <!--</table><div class="dataTables_info" id="newOrderTable_info">Showing 0 to 0 of 0 entries</div><div class="dataTables_paginate paging_two_button" id="newOrderTable_paginate"><div class="paginate_disabled_previous" title="Previous" id="newOrderTable_previous"></div><div class="paginate_disabled_next" title="Next" id="newOrderTable_next"></div></div></div>-->
+          <!--</div>-->
+          <!--<table width="98%" align="center">-->
+            <!--<tbody><tr>-->
+              <!--<td width="15%">Export Format : </td>-->
+              <!--<td width="85%">-->
+
+                <!--<input type="radio" name="chosenExportType" id="frmManageNewOrder_chosenExportTypeCSV" value="CSV">CSV-->
+
+                <!--<input type="radio" name="chosenExportType" id="frmManageNewOrder_chosenExportTypeEXCEL" checked="checked" value="EXCEL">EXCEL-->
+
+              <!--</td>-->
+            <!--</tr>-->
+            <!--</tbody></table>-->
+        <!--</div>-->
+
+      <!--</div>-->
+
+      <!--<div id="divBox" class="box" align="right">-->
+
+
+        <!--<input type="submit" value="Receive Selected Orders" id="submit3" name="submitType" class="buttonoff" onclick="javascript: return checkAllFine('Receive', 0)">-->
+
+        <!--<input type="submit" value="Export Selected Orders" id="submit2" name="submitType" class="buttonoff" onclick="javascript: return checkAllFine('Export', 0)">-->
+
+
+
+
+      <!--</div>-->
+    <!--</div>-->
+  <!--</form>-->
+
+
+
+<!--</div>-->

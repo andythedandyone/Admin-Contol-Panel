@@ -1,3 +1,129 @@
-<p>
-  mdeveliveredorder works!
-</p>
+<div class="container">
+
+
+  <div class="row">
+    <div class="col-md-6">
+
+      <h1>Manage Delivered Order</h1>
+      <form>
+        <div class="form-group">
+          <label for="orderdeliverd">Order Id</label>
+          <input type="number" class="form-control" id="orderdeliverd">
+          <!--<small id="orderdeliverd" class="form-text text-muted">Enter an order number to search.</small>-->
+        </div>
+
+
+        <div class="row">
+          <div class="col-md-3">
+
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="datefrom">From</label>
+              <input type="date" class="form-control" id="datefrom">
+              <small id="datefrom" class="form-text text-muted">Pick an Order Date to Start Search.</small>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="dateto">To</label>
+              <input type="date" class="form-control" id="dateto">
+              <small id="dateto" class="form-text text-muted">Pick an Order Date to End Search.</small>
+            </div>
+          </div>
+          <div class="col-md-3">
+          </div>
+        </div>
+
+
+
+        <select>
+          <option value="-1">select Product</option>
+          <option value="157">Premium Low Sulfur #2 Heating Oil</option>
+          <option value="156" selected="selected">Premium Low Sulfur #2 Heating Oil</option>
+          <option value="82">Prime &amp; Start &lt;br/&gt;(Must be home at time of delivery)</option>
+          <option value="84">Emergency Delivery &lt;br/&gt;(Order must be placed by 10:00 am)</option>
+          <option value="150">Anti Gel Additive</option>
+        </select>
+
+        <button type="submit" class="btn btn-primary">Search Order</button>
+      </form>
+    </div>
+  </div>
+
+
+
+
+  <!--//Order	Product	Quantity Ordered	Order Date	Truck Code	Expected Delivery Date	Delivered Quantity	PPG Override	Desired Delivery Date	Actual Delivery Date	Select All-->
+  <div class="row">
+    <div class="col-md-12">
+      <span>Orders</span>
+      <select size="1" name="newOrderTable_length">
+        <option value="5" selected="selected">5</option>
+        <option value="10">10</option>
+        <option value="15">15</option>
+        <option value="All">All</option>
+      </select>
+      <span>per page</span>
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table -table-striped">
+        <thead>
+        <tr>
+          <th>Order</th>
+          <th>Product</th>
+          <th>Delivery Location</th>
+          <th>Order Date</th>
+          <th>Invoice Total $</th>
+          <th>Delivered Quantity (gal)</th>
+          <th>Delivery Date</th>
+          <th>Select All</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+          <td>No Matching Found</td>
+        </tr>
+        </tbody>
+
+        <tfoot>
+        <tr class="table-info">
+          <td>
+            Showing 0 to 0 of 0 entries
+          </td>
+        </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+
+
+
+
+  <div class="row">
+    <div class="col-md-2">
+      <span>Export Format</span>
+    </div>
+    <div class="col-md-4">
+      <input type="radio" name="chosenExportType" id="frmManageNewOrder_chosenExportTypeCSV" value="CSV">CSV
+      <input type="radio" name="chosenExportType" id="frmManageNewOrder_chosenExportTypeEXCEL" checked="checked" value="EXCEL">EXCEL
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-12" align="right">
+      <button class="btn btn-button">Export</button>
+      <button class="btn btn-button">Update</button>
+    </div>
+  </div>
+
+
+</div>
